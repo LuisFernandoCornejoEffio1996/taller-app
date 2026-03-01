@@ -3,7 +3,7 @@ spring:
     name: taller-app
 
   profiles:
-    active: prod
+    active: dev
 
   main:
     web-application-type: none   # porque es JavaFX, no web

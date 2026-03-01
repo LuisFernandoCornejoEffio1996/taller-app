@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            stylesheets="@/css/main/sidebar.css, @/css/main/main.css, @/css/core/botones.css"
+            fx:controller="com.taller.app.ui.MainController"
+            prefWidth="1200"
+            prefHeight="700">
+    <!-- MENÚ LATERAL -->
+    <left>
+        <VBox fx:id="menuLateral"
+              prefWidth="260"
+              minWidth="260"
+              maxWidth="260"
+              spacing="12"
+              styleClass="sidebar">
+
+            <!-- Header del menú -->
+            <HBox alignment="CENTER_LEFT" spacing="10"
+                  prefWidth="Infinity" maxWidth="Infinity"
+                  VBox.vgrow="NEVER">
+                <Label fx:id="lblMenuTitle"
+                       text="MENÚ"
+                       styleClass="sidebar-title"
+                       maxWidth="Infinity"
+                       HBox.hgrow="ALWAYS"/>
+            </HBox>
+
+            <!-- Opción: Inicio -->
+            <Button fx:id="btnInicio"
+                    text=" Inicio"
+                    onAction="#abrirInicio"
+                    styleClass="sidebar-button"
+                    maxWidth="Infinity"
+                    VBox.vgrow="NEVER">
+                <graphic>
+                    <FontAwesomeIconView glyphName="HOME" size="18"/>
+                </graphic>
+            </Button>
+
+            <!-- Sección: Configuración -->
+            <Label text="CONFIGURACIÓN" styleClass="sidebar-section"/>
+
+            <Button fx:id="btnEmpresa"
+                    text=" Empresa"
+                    onAction="#abrirEmpresaConfig"
+                    styleClass="sidebar-button"
+                    maxWidth="Infinity"
+                    VBox.vgrow="NEVER">
+                <graphic>
+                    <FontAwesomeIconView glyphName="BUILDING" size="18"/>
+                </graphic>
+            </Button>
+
+            <!-- Sección: Seguridad -->
+            <Label text="SEGURIDAD" styleClass="sidebar-section"/>
+
+            <Button fx:id="btnUsuarios"
+                    text=" Usuarios"
+                    onAction="#abrirUsuarios"
+                    styleClass="sidebar-button"
+                    maxWidth="Infinity"
+                    VBox.vgrow="NEVER">
+                <graphic>
+                    <FontAwesomeIconView glyphName="USER" size="18"/>
+                </graphic>
+            </Button>
+
+        </VBox>
+    </left>
+
+    <!-- CONTENEDOR DINÁMICO -->
+    <center>
+        <StackPane fx:id="contenedorPrincipal"
+                   style="-fx-background-color: #ecf0f1;"
+                   BorderPane.alignment="CENTER"/>
+    </center>
+
+</BorderPane>
+

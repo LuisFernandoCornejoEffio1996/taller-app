@@ -1,0 +1,94 @@
+/* ============================
+   BOTONES BASE
+   ============================ */
+
+.button {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+/* ============================
+   PALETA DE COLORES
+   ============================ */
+
+/* Azul corporativo */
+.btn-primary {
+    -fx-background-color: #2980b9;
+    -fx-text-fill: white;
+}
+.btn-primary:hover {
+    -fx-background-color: #3498db;
+}
+
+/* Verde (acciones positivas) */
+.btn-success {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+}
+.btn-success:hover {
+    -fx-background-color: #2ecc71;
+}
+
+/* Amarillo (advertencias) */
+.btn-warning {
+    -fx-background-color: #f1c40f;
+    -fx-text-fill: #2c3e50;
+}
+.btn-warning:hover {
+    -fx-background-color: #f39c12;
+}
+
+/* Rojo (acciones peligrosas) */
+.btn-danger {
+    -fx-background-color: #c0392b;
+    -fx-text-fill: white;
+}
+.btn-danger:hover {
+    -fx-background-color: #e74c3c;
+}
+
+/* Gris (acciones neutrales) */
+.btn-secondary {
+    -fx-background-color: #7f8c8d;
+    -fx-text-fill: white;
+}
+.btn-secondary:hover {
+    -fx-background-color: #95a5a6;
+}
+
+/* Botón claro */
+.btn-light {
+    -fx-background-color: #ecf0f1;
+    -fx-text-fill: #2c3e50;
+}
+.btn-light:hover {
+    -fx-background-color: #d0d7da;
+}
+
+/* Botón oscuro */
+.btn-dark {
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: white;
+}
+.btn-dark:hover {
+    -fx-background-color: #34495e;
+}
+
+/* Botón tipo enlace */
+.btn-link {
+    -fx-background-color: transparent;
+    -fx-text-fill: #2980b9;
+    -fx-padding: 0;
+}
+.btn-link:hover {
+    -fx-text-fill: #3498db;
+    -fx-underline: true;
+}
+
+.button .glyph-icon {
+    -fx-fill: white;
+    -fx-padding: 0 8 0 0; /* espacio entre ícono y texto */
+}

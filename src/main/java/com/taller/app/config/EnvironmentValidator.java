@@ -1,48 +1,40 @@
 package com.taller.app.config;
 
 import jakarta.annotation.PostConstruct;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
 
+@Slf4j
 @Component
+@RequiredArgsConstructor
 public class EnvironmentValidator {
 
-    private final Environment env;
-
-    public EnvironmentValidator(Environment env) {
-        this.env = env;
-    }
+    private final AppConfig config;
 
     @PostConstruct
     public void validate() {
 
-        String[] profiles = env.getActiveProfiles();
+        validarRuta(config.getLogPath(), "Logs");
+        validarRuta(config.getStorage().getEmpresa().getLogoPath(), "Logos de empresa");
+    }
 
-        if (profiles.length == 0) {
-            throw new IllegalStateException("❌ No hay perfiles activos. Configura spring.profiles.active");
+    private void validarRuta(String ruta, String descripcion) {
+
+        if (ruta == null || ruta.isBlank()) {
+            throw new IllegalStateException("❌ Falta la propiedad obligatoria: " + descripcion);
         }
 
-        System.out.println("=== Ambiente activo: " + String.join(", ", profiles));
+        File dir = new File(ruta);
 
-        // Validar propiedad obligatoria
-        String logPath = env.getProperty("app.log-path");
-
-        String[] subCarpetas = {"app", "seguridad"};
-
-        if (logPath == null || logPath.isBlank()) {
-            throw new IllegalStateException("❌ Falta la propiedad obligatoria: app.log-path");
-        }
-
-        for (String folder : subCarpetas){
-            File dir = new File(logPath+"/"+folder);
-            if (!dir.exists()) {
-                boolean created = dir.mkdirs();
-                System.out.println("📁 Creando carpeta de logs: " + logPath + " -> " + created);
-            } else {
-                System.out.println("📁 Carpeta de logs existente: " + logPath+"/"+folder);
-            }
+        if (!dir.exists()) {
+            boolean created = dir.mkdirs();
+            log.info("📁 Creando carpeta {} en {} -> {}", descripcion, ruta, created);
+        } else {
+            log.info("📁 Carpeta existente para {}: {}", descripcion, ruta);
         }
     }
 }

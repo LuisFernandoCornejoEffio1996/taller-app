@@ -7,3 +7,6 @@ spring:
 
 app:
   log-path: "D:/Proyectos/Logs_proyectos/taller_app"
+  storage:
+    empresa:
+      logo-path: "D:/Proyectos/almacenamiento/taller_app/empresa/logo/"

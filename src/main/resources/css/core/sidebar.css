@@ -1,0 +1,135 @@
+/* ===========================
+   SIDEBAR BASE
+   =========================== */
+.sidebar{
+    -fx-background-color:#343a40;
+}
+
+/* LOGO */
+.sidebar-logo{
+    -fx-text-fill:white;
+    -fx-font-size:18px;
+    -fx-font-weight:bold;
+    -fx-pref-height:50;
+    -fx-alignment:CENTER_LEFT;
+    -fx-padding:0 20;
+}
+
+/* ===========================
+   CONTENEDOR DE ITEMS
+   =========================== */
+.sidebar-item{
+    -fx-pref-width:100%;
+    -fx-fill-width:true;
+    -fx-alignment:CENTER_LEFT;
+}
+
+/* ===========================
+   BOTONES PRINCIPALES
+   =========================== */
+.sidebar-button{
+    -fx-background-color:transparent;
+    -fx-text-fill:#c2c7d0;
+    -fx-pref-width:100%;
+    -fx-pref-height:42;
+    -fx-alignment:CENTER_LEFT;
+    -fx-padding:0 10;
+    -fx-font-size:13px;
+    -fx-content-display: LEFT;
+}
+
+.sidebar-button:hover{
+    -fx-background-color:#495057;
+    -fx-text-fill:white;
+}
+
+/* ===========================
+   HEADER CONFIGURACIÓN
+   =========================== */
+.sidebar-section-header{
+    -fx-background-color:transparent;
+    -fx-text-fill:#c2c7d0;
+    -fx-pref-width:100%;
+    -fx-pref-height:42;
+    -fx-alignment:CENTER_LEFT;
+    -fx-padding:0 10;
+    -fx-font-size:13px;
+    -fx-font-weight:bold;
+    -fx-content-display: LEFT;
+}
+
+.sidebar-section-header:hover{
+    -fx-background-color:#495057;
+}
+
+/* ===========================
+   SUBMENÚ
+   =========================== */
+.submenu{
+    -fx-background-color:#3f474e;
+    -fx-pref-width:100%;
+}
+
+.submenu-button{
+    -fx-background-color:transparent;
+    -fx-text-fill:#dee2e6;
+    -fx-pref-width:100%;
+    -fx-pref-height:40;
+    -fx-alignment:CENTER_LEFT;
+    -fx-padding:0 10;
+    -fx-font-size:13px;
+    -fx-content-display: LEFT;
+}
+
+.submenu-button:hover{
+    -fx-background-color:#495057;
+}
+
+/* Desplazar contenido del submenú */
+.submenu-button > .graphic {
+    -fx-translate-x:25;
+}
+
+/* ===========================
+   ICONOS
+   =========================== */
+.iconos{
+    -fx-icon-color:#adb5bd;
+}
+
+.submenu-icon{
+    -fx-icon-color:#ced4da;
+}
+
+/* ===========================
+   FLECHA DE SUBMENÚ
+   =========================== */
+.submenu-arrow{
+    -fx-icon-color:#adb5bd;
+    -fx-rotate:0;
+}
+
+.submenu-open .submenu-arrow{
+    -fx-rotate:180;
+}
+
+/* ===========================
+   ESTADO ACTIVO
+   =========================== */
+.sidebar-active{
+    -fx-background-color:#007bff !important;
+    -fx-text-fill:white !important;
+}
+
+.sidebar-active .ikonli-font-icon{
+    -fx-icon-color:white !important;
+}
+
+/* ===========================
+   FIX FULL WIDTH
+   =========================== */
+.sidebar-item > .button,
+.sidebar-item > .submenu-button,
+.sidebar-item > .sidebar-section-header{
+    -fx-max-width:Infinity;
+}

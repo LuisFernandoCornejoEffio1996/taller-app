@@ -1,16 +1,17 @@
 package com.taller.app.modules.configuracion.empresa.repository;
 
-import com.taller.app.modules.configuracion.empresa.model.EmpresaConfig;
-import com.taller.app.util.enums.EstadoRegistro;
+import com.taller.app.modules.configuracion.empresa.entity.EmpresaConfig;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
+/**
+ * Acceso a datos de empresa
+ */
+@Repository
 public interface EmpresaConfigRepository extends JpaRepository<EmpresaConfig, Integer> {
-
-    Optional<EmpresaConfig> findFirstByEstado(EstadoRegistro estado);
-
-    Optional<EmpresaConfig> findByRuc(String ruc);
-
-    boolean existsByEstado(EstadoRegistro estado);
+    @Query("SELECT e FROM EmpresaConfig e WHERE e.estado = 1")
+    Optional<EmpresaConfig> obtenerEmpresaActiva();
 }

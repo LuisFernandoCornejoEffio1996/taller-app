@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<ScrollPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.taller.app.modules.dashboard.ui.DashboardController"
+            fitToWidth="true"
+            stylesheets="@/css/main/dashboard.css"
+            userData="Inicio">
+
+    <VBox spacing="40"
+          alignment="TOP_CENTER"
+          style="-fx-padding:40;">
+
+        <VBox spacing="4" maxWidth="900">
+            <Label text="Panel Principal" styleClass="dashboard-title"/>
+            <Label text="Bienvenido al ERP" styleClass="subtitulo"/>
+        </VBox>
+
+        <FlowPane hgap="25"
+                  vgap="25"
+                  alignment="CENTER"
+                  prefWrapLength="900"
+                  styleClass="dashboard-cards">
+
+            <HBox styleClass="small-box bg-info" alignment="CENTER_LEFT" spacing="15">
+
+                <VBox styleClass="small-box-content">
+                    <Label text="Empresa" styleClass="small-box-title"/>
+                    <Label text="Configurar datos" styleClass="small-box-number"/>
+                    <Button text="Abrir"
+                            fx:id="btnEmpresa"
+                            onAction="#abrirEmpresa"
+                            styleClass="btn-primary"/>
+                </VBox>
+
+                <FontIcon fx:id="iconBuilding"
+                          iconSize="40"
+                          styleClass="small-box-icon"/>
+
+            </HBox>
+
+            <HBox styleClass="small-box bg-success" alignment="CENTER_LEFT" spacing="15">
+
+                <VBox styleClass="small-box-content">
+                    <Label text="Usuarios" styleClass="small-box-title"/>
+                    <Label text="Gestión" styleClass="small-box-number"/>
+                    <Button text="Abrir"
+                            fx:id="btnUsuarios"
+                            styleClass="btn-success"/>
+                </VBox>
+
+                <FontIcon fx:id="iconUsers"
+                          iconSize="40"
+                          styleClass="small-box-icon"/>
+
+            </HBox>
+
+        </FlowPane>
+
+    </VBox>
+
+</ScrollPane>

@@ -1,0 +1,61 @@
+/* ICONO POR DEFECTO EN CARDS */
+.card FontIcon{
+    -fx-icon-color:#007bff;
+}
+
+/* CONTENEDOR DE TARJETAS (opcional si quieres más control) */
+.dashboard-cards{
+    -fx-hgap:25;
+    -fx-vgap:25;
+}
+
+/* SMALL BOX (tipo AdminLTE) */
+.small-box{
+    -fx-background-radius:6;
+    -fx-border-radius:6;
+    -fx-padding:15;
+    -fx-background-color:#ffffff;
+    -fx-effect:dropshadow(three-pass-box,rgba(0,0,0,0.08),12,0,0,3);
+}
+
+.small-box-content{
+    -fx-spacing:5;
+}
+
+.small-box-title{
+    -fx-font-size:13px;
+    -fx-text-fill:#f8f9fa;
+}
+
+.small-box-number{
+    -fx-font-size:22px;
+    -fx-font-weight:bold;
+    -fx-text-fill:#ffffff;
+}
+
+/* COLORES TIPO AdminLTE */
+.bg-info{
+    -fx-background-color:#17a2b8;
+}
+.bg-success{
+    -fx-background-color:#28a745;
+}
+.bg-warning{
+    -fx-background-color:#ffc107;
+}
+.bg-danger{
+    -fx-background-color:#dc3545;
+}
+
+/* ICONO GRANDE A LA DERECHA */
+.small-box-icon{
+    -fx-opacity:0.4;
+}
+
+/* FOOTER TIPO "More info" */
+.small-box-footer{
+    -fx-padding:6 0 0 0;
+    -fx-font-size:11px;
+    -fx-text-fill:#f8f9fa;
+}
+

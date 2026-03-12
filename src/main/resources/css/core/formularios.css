@@ -1,0 +1,19 @@
+.label{
+    -fx-font-size:13px;
+}
+
+.text-field{
+    -fx-background-radius:4;
+    -fx-border-radius:4;
+    -fx-border-color:#ced4da;
+    -fx-padding:6 8;
+}
+
+.text-field:focused{
+    -fx-border-color:#007bff;
+}
+
+.combo-box{
+    -fx-border-color:#ced4da;
+}
+

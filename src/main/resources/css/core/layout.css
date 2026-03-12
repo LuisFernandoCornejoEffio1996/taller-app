@@ -1,0 +1,40 @@
+.root{
+    -fx-font-family:"Segoe UI";
+    -fx-background-color:#f4f6f9;
+}
+
+/* CONTENIDO CENTRAL */
+.main-content{
+    -fx-background-color:#f4f6f9;
+}
+
+/* TOPBAR */
+.topbar{
+    -fx-background-color:#ffffff;
+    -fx-padding:10 15;
+    -fx-border-color:#dee2e6;
+    -fx-border-width:0 0 1 0;
+}
+
+.topbar-title{
+    -fx-font-size:15px;
+    -fx-font-weight:bold;
+}
+
+/* CARD BASE (reutilizable) */
+.card{
+    -fx-background-color:#ffffff;
+    -fx-padding:20;
+    -fx-spacing:15;
+    -fx-alignment:center;
+    -fx-background-radius:6;
+    -fx-border-radius:6;
+    -fx-border-color:#e3e6ea;
+    -fx-effect:dropshadow(three-pass-box,rgba(0,0,0,0.08),12,0,0,3);
+}
+
+.card-title{
+    -fx-font-size:14px;
+    -fx-font-weight:bold;
+}
+

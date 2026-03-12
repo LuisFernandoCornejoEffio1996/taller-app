@@ -1,0 +1,52 @@
+/* ============================
+   UNIDAD DE MEDIDA
+   ============================ */
+
+.section-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+/* Tabla estilo AdminLTE */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #dcdcdc;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #f4f6f9;
+}
+
+.table-view .column-header,
+.table-view .filler {
+    -fx-size: 36px;
+    -fx-border-color: #e1e1e1;
+    -fx-border-width: 0 0 1 0;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.table-view .column-header .label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495e;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #d9edf7; /* AdminLTE info */
+}
+
+/* Formularios del modal */
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 8;
+}
+
+.text-field:focused {
+    -fx-border-color: #3c8dbc;
+    -fx-effect: dropshadow(three-pass-box, rgba(60,141,188,0.3), 6, 0, 0, 0);
+}

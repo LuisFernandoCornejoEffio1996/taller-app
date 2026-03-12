@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.taller.app.ui.main.MainLayoutController"
+            prefWidth="1200"
+            prefHeight="750"
+            stylesheets="@/css/core/layout.css,
+                        @/css/core/sidebar.css,
+                        @/css/core/botones.css,
+                        @/css/core/formularios.css,
+                        @/css/core/tipografia.css">
+
+    <!-- SIDEBAR -->
+    <left>
+        <VBox fx:id="sidebar"
+              prefWidth="260"
+              spacing="0"
+              styleClass="sidebar">
+
+            <!-- LOGO -->
+            <Label fx:id="lblLogo"
+                   text="Menú"
+                   styleClass="sidebar-logo"/>
+
+            <!-- INICIO -->
+            <StackPane styleClass="sidebar-item">
+                <Button fx:id="btnInicio"
+                        onAction="#abrirDashboard"
+                        styleClass="sidebar-button"
+                        StackPane.alignment="CENTER_LEFT">
+                    <graphic>
+                        <HBox spacing="10" alignment="CENTER_LEFT">
+                            <FontIcon fx:id="iconHome" iconSize="18" styleClass="iconos"/>
+                            <Label text="Inicio"/>
+                        </HBox>
+                    </graphic>
+                </Button>
+            </StackPane>
+
+            <!-- HEADER CONFIGURACIÓN -->
+            <StackPane styleClass="sidebar-item">
+                <Button fx:id="btnConfigHeader"
+                        onAction="#toggleConfig"
+                        styleClass="sidebar-section-header"
+                        StackPane.alignment="CENTER_LEFT">
+
+                    <graphic>
+                        <HBox spacing="10" alignment="CENTER_LEFT" prefWidth="Infinity">
+                            <FontIcon fx:id="iconConfig" iconSize="18" styleClass="iconos"/>
+
+                            <Label text="Configuración"
+                                   styleClass="sidebar-text"/>
+
+                            <Pane HBox.hgrow="ALWAYS"/>
+
+                            <FontIcon fx:id="iconArrowConfig"
+                                      iconLiteral="fas-angle-down"
+                                      iconSize="14"
+                                      styleClass="submenu-arrow"/>
+                        </HBox>
+                    </graphic>
+                </Button>
+            </StackPane>
+
+            <!-- SUBMENÚ -->
+            <VBox fx:id="submenuConfig"
+                  styleClass="submenu"
+                  visible="false"
+                  managed="false">
+
+                <!-- EMPRESA -->
+                <StackPane styleClass="sidebar-item">
+                    <Button fx:id="btnEmpresaConfig"
+                            onAction="#abrirEmpresaConfig"
+                            styleClass="submenu-button"
+                            StackPane.alignment="CENTER_LEFT">
+                        <graphic>
+                            <HBox spacing="10" alignment="CENTER_LEFT">
+                                <!-- desplazamiento visual del contenido -->
+                                <Pane prefWidth="25"/>
+
+                                <FontIcon fx:id="icomBuilding" iconSize="16" styleClass="submenu-icon"/>
+
+                                <Label text="Empresa"
+                                       styleClass="submenu-text"/>
+                            </HBox>
+                        </graphic>
+                    </Button>
+                </StackPane>
+
+                <!-- UNIDADES DE MEDIDA -->
+                <StackPane styleClass="sidebar-item">
+                    <Button fx:id="btnUnidadMedida"
+                            onAction="#abrirUnidadMedida"
+                            styleClass="submenu-button"
+                            StackPane.alignment="CENTER_LEFT">
+
+                        <graphic>
+                            <HBox spacing="10" alignment="CENTER_LEFT">
+                                <!-- desplazamiento visual del contenido -->
+                                <Pane prefWidth="25"/>
+
+                                <FontIcon fx:id="iconBalanceScale" iconSize="16" styleClass="submenu-icon"/>
+
+                                <Label text="Unidades de Medida"
+                                       styleClass="submenu-text"/>
+                            </HBox>
+                        </graphic>
+                    </Button>
+                </StackPane>
+
+            </VBox>
+
+            <Pane VBox.vgrow="ALWAYS"/>
+
+            <!-- USUARIO -->
+            <VBox styleClass="sidebar-user">
+                <Label fx:id="lblUsuarioNombre" text="Administrador"/>
+                <Label fx:id="lblUsuarioCargo" text="Administrador"/>
+            </VBox>
+
+        </VBox>
+    </left>
+
+    <!-- TOPBAR -->
+    <top>
+        <HBox styleClass="topbar" alignment="CENTER_LEFT" spacing="10">
+
+            <Label fx:id="lblTituloSistema"
+                   styleClass="topbar-title"/>
+
+            <Pane HBox.hgrow="ALWAYS"/>
+
+            <Label text="Usuario: Admin"/>
+
+        </HBox>
+    </top>
+
+    <!-- CONTENIDO -->
+    <center>
+        <StackPane fx:id="mainContent"
+                   styleClass="main-content"/>
+    </center>
+
+</BorderPane>

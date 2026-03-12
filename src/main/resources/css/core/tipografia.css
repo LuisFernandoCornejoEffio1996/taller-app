@@ -1,0 +1,15 @@
+.titulo{
+    -fx-font-size:22px;
+    -fx-font-weight:bold;
+}
+
+.subtitulo{
+    -fx-font-size:13px;
+    -fx-text-fill:#7f8c8d;
+}
+
+.dashboard-title{
+    -fx-font-size:20px;
+    -fx-font-weight:bold;
+}
+

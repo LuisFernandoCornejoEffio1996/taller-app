@@ -4,7 +4,7 @@ app:
 spring:
 
   datasource:
-    url: jdbc:mysql://localhost:3306/taller_bd_desa
+    url: jdbc:mysql://localhost:3306/erp_taller_desa
     username: root
     password: 1234
     driver-class-name: com.mysql.cj.jdbc.Driver
